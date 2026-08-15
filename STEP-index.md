@@ -46,7 +46,7 @@ worked, and completed.
 
 | Substep | Session | Status | Output doc |
 |---------|---------|--------|------------|
-| 1.1 | System Overview, Requirements & Non-Goals | Planned | `architecture/01-…` |
+| 1.1 | System Overview, Requirements & Non-Goals | Done | `architecture/01-system-overview.md` |
 | 1.2 | Phasing & Roadmap | Planned | `architecture/02-…` |
 | 1.3 | Architecture Overview & Component Boundaries | Planned | `architecture/03-…` |
 | 1.3a | Native App Architecture *(conditional)* | Planned | `architecture/15-native-app-architecture.md` |
