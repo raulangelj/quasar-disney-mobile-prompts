@@ -24,6 +24,15 @@ worked, and completed.
 
 ## Phase 1 — POC
 
+> **Phase plan set in STEP-1.2** — see `Code/quasar-disney-mobile-docs/architecture/02-phasing-roadmap.md`.
+> Phase 1 is a functional POC with **visual fidelity** to supplied Disney+ reference screens, split
+> into **1a** (gated by an immovable stakeholder sign-off on **2026-08-18**) and **1b** (remainder,
+> undated). 1a = auth flow (welcome + credentials + inline error) · storefront with 2 config-driven
+> carousel variants · two-mode theme · API contract + fetch-simulating mocks · tests for every
+> reducer/middleware/hook (UI tests deferred). Later: **Phase 2** hero carousel, filter rail, details
+> screen, Bitrise CI · **Phase 3** backend integration (we build no backend) · **Phase 4+** playback,
+> profiles, downloads.
+
 | STEP | Title | Owner | Status | Repos (projection) | Scope (one line) |
 |------|-------|-------|--------|--------------------|------------------|
 | STEP-1 | Architecture | | In progress | `quasar-disney-mobile-docs`, `prompts` | Architecture-first: design docs + ADRs, no code. Substeps = the sessions in `templates/architecture-sessions/`. Branch: `step-0001-architecture`. |
@@ -47,7 +56,7 @@ worked, and completed.
 | Substep | Session | Status | Output doc |
 |---------|---------|--------|------------|
 | 1.1 | System Overview, Requirements & Non-Goals | Done | `architecture/01-system-overview.md` |
-| 1.2 | Phasing & Roadmap | Planned | `architecture/02-…` |
+| 1.2 | Phasing & Roadmap | Done | `architecture/02-phasing-roadmap.md` |
 | 1.3 | Architecture Overview & Component Boundaries | Planned | `architecture/03-…` |
 | 1.3a | Native App Architecture *(conditional)* | Planned | `architecture/15-native-app-architecture.md` |
 | 1.4 | Data Model, Ownership & Retention | Planned | `architecture/04-…` |
