@@ -22,15 +22,11 @@ worked, and completed.
 > **Owner** = who's on it; **Repos** = the repos it expects to touch (a *projection* that may
 > change — it powers the overlap warning, it doesn't reserve anything). Solo, leave them blank.
 
-## Phase 1 — {{PHASE_1_NAME}}
-<!-- {{PHASE_1_NAME}}: kickoff (BOOTSTRAP-PROMPT.md Stage 1) fills this with the chosen phase
-     name — MVP (the default) / POC / prototype / v1. Its kebab-case form later names the
-     001-<phase-name>/ archive folder, created when STEP-1 is archived. init.sh leaves the
-     placeholder as-is; Check 8 parses the table rows below, not this heading. -->
+## Phase 1 — POC
 
 | STEP | Title | Owner | Status | Repos (projection) | Scope (one line) |
 |------|-------|-------|--------|--------------------|------------------|
-| STEP-1 | Architecture | | Planned | `quasar-disney-mobile-docs`, `prompts` | Architecture-first: design docs + ADRs, no code. Substeps = the sessions in `templates/architecture-sessions/`. `init.sh` reserves this row; kickoff flips it to `In progress` and uses branch `step-0001-architecture` where branch-per-STEP applies. |
+| STEP-1 | Architecture | | In progress | `quasar-disney-mobile-docs`, `prompts` | Architecture-first: design docs + ADRs, no code. Substeps = the sessions in `templates/architecture-sessions/`. Branch: `step-0001-architecture`. |
 
 <!-- STEP-1 is the ONLY row at bootstrap. STEP-2 onward are the implementation STEPs — don't
      add them by hand: after STEP-1's review passes, run the planning session
@@ -53,9 +49,11 @@ worked, and completed.
 | 1.1 | System Overview, Requirements & Non-Goals | Planned | `architecture/01-…` |
 | 1.2 | Phasing & Roadmap | Planned | `architecture/02-…` |
 | 1.3 | Architecture Overview & Component Boundaries | Planned | `architecture/03-…` |
+| 1.3a | Native App Architecture *(conditional)* | Planned | `architecture/15-native-app-architecture.md` |
 | 1.4 | Data Model, Ownership & Retention | Planned | `architecture/04-…` |
 | 1.5 | Scaling & Performance | Planned | `architecture/05-…` |
 | 1.6 | Security & Threat Model | Planned | `architecture/06-…` |
+| 1.6a | Identity & Auth *(conditional)* | Planned | `architecture/16-identity-auth.md` |
 | 1.7 | UI / Design System | Planned | `architecture/07-…` |
 | 1.8 | Infrastructure & Deployment | Planned | `architecture/08-…` |
 | 1.9 | Environments | Planned | `architecture/09-…` |
