@@ -63,11 +63,11 @@ worked, and completed.
 | 1.5 | Scaling & Performance | Done | `architecture/05-scaling-performance.md` |
 | 1.6 | Security & Threat Model | Done | `architecture/06-security-threat-model.md` |
 | 1.6a | Identity & Auth *(conditional)* | Done | `architecture/16-identity-auth.md` |
-| 1.7 | UI / Design System | Done | `architecture/07-…` |
-| 1.8 | Infrastructure & Deployment | Done | `architecture/08-…` |
-| 1.9 | Environments | Done | `architecture/09-…` |
-| 1.10 | Observability | Done | `architecture/10-…` |
-| 1.11 | Interface Contracts | Planned | `architecture/11-…` |
+| 1.7 | UI / Design System | Done | `architecture/07-ui-design-system.md` |
+| 1.8 | Infrastructure & Deployment | Done | `architecture/08-infrastructure-deployment.md` |
+| 1.9 | Environments | Done | `architecture/09-environments.md` |
+| 1.10 | Observability | Done | `architecture/10-observability.md` |
+| 1.11 | Interface Contracts | Done | `architecture/11-interface-contracts.md` |
 | 1.12 | Test Strategy | Planned | `architecture/12-…` |
 | 1.13 | Glossary | Planned | `architecture/13-…` |
 | 1.14 | Cross-Cutting Review | Planned | review doc |
