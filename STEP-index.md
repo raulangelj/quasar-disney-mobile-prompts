@@ -57,7 +57,7 @@ worked, and completed.
 |---------|---------|--------|------------|
 | 1.1 | System Overview, Requirements & Non-Goals | Done | `architecture/01-system-overview.md` |
 | 1.2 | Phasing & Roadmap | Done | `architecture/02-phasing-roadmap.md` |
-| 1.3 | Architecture Overview & Component Boundaries | Planned | `architecture/03-…` |
+| 1.3 | Architecture Overview & Component Boundaries | Done | `architecture/03-architecture-overview.md` |
 | 1.3a | Native App Architecture *(conditional)* | Planned | `architecture/15-native-app-architecture.md` |
 | 1.4 | Data Model, Ownership & Retention | Planned | `architecture/04-…` |
 | 1.5 | Scaling & Performance | Planned | `architecture/05-…` |
