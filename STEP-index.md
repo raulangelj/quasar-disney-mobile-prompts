@@ -68,7 +68,7 @@ worked, and completed.
 | 1.9 | Environments | Done | `architecture/09-environments.md` |
 | 1.10 | Observability | Done | `architecture/10-observability.md` |
 | 1.11 | Interface Contracts | Done | `architecture/11-interface-contracts.md` |
-| 1.12 | Test Strategy | Planned | `architecture/12-…` |
+| 1.12 | Test Strategy | Done | `architecture/12-test-strategy.md` |
 | 1.13 | Glossary | Planned | `architecture/13-…` |
 | 1.14 | Cross-Cutting Review | Planned | review doc |
 
