@@ -69,7 +69,7 @@ worked, and completed.
 | 1.10 | Observability | Done | `architecture/10-observability.md` |
 | 1.11 | Interface Contracts | Done | `architecture/11-interface-contracts.md` |
 | 1.12 | Test Strategy | Done | `architecture/12-test-strategy.md` |
-| 1.13 | Glossary | Planned | `architecture/13-…` |
+| 1.13 | Glossary | Done | `architecture/13-glossary.md` |
 | 1.14 | Cross-Cutting Review | Planned | review doc |
 
 <!-- Conditional sessions: enumerate every conditional-*.md template and include/defer/skip it
