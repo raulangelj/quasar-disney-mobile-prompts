@@ -61,7 +61,7 @@ worked, and completed.
 | 1.3a | Native App Architecture *(conditional)* | Done | `architecture/15-native-app-architecture.md` |
 | 1.4 | Data Model, Ownership & Retention | Done | `architecture/04-data-model.md` |
 | 1.5 | Scaling & Performance | Done | `architecture/05-scaling-performance.md` |
-| 1.6 | Security & Threat Model | Planned | `architecture/06-…` |
+| 1.6 | Security & Threat Model | Done | `architecture/06-security-threat-model.md` |
 | 1.6a | Identity & Auth *(conditional)* | Planned | `architecture/16-identity-auth.md` |
 | 1.7 | UI / Design System | Planned | `architecture/07-…` |
 | 1.8 | Infrastructure & Deployment | Planned | `architecture/08-…` |
