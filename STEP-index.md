@@ -65,7 +65,7 @@ worked, and completed.
 | 1.6a | Identity & Auth *(conditional)* | Done | `architecture/16-identity-auth.md` |
 | 1.7 | UI / Design System | Done | `architecture/07-…` |
 | 1.8 | Infrastructure & Deployment | Done | `architecture/08-…` |
-| 1.9 | Environments | Planned | `architecture/09-…` |
+| 1.9 | Environments | Done | `architecture/09-…` |
 | 1.10 | Observability | Planned | `architecture/10-…` |
 | 1.11 | Interface Contracts | Planned | `architecture/11-…` |
 | 1.12 | Test Strategy | Planned | `architecture/12-…` |
