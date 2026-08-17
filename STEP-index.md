@@ -63,7 +63,7 @@ worked, and completed.
 | 1.5 | Scaling & Performance | Done | `architecture/05-scaling-performance.md` |
 | 1.6 | Security & Threat Model | Done | `architecture/06-security-threat-model.md` |
 | 1.6a | Identity & Auth *(conditional)* | Done | `architecture/16-identity-auth.md` |
-| 1.7 | UI / Design System | Planned | `architecture/07-…` |
+| 1.7 | UI / Design System | Done | `architecture/07-…` |
 | 1.8 | Infrastructure & Deployment | Planned | `architecture/08-…` |
 | 1.9 | Environments | Planned | `architecture/09-…` |
 | 1.10 | Observability | Planned | `architecture/10-…` |
