@@ -1,4 +1,4 @@
-# quasar-disney-mobile — STEP Index
+# quasar-qc-plus-mobile — STEP Index
 
 The living roadmap. Every STEP, its status, and a one-line scope. **This is the first
 place to look to understand where the project is.** Keep it current as STEPs are planned,
@@ -24,8 +24,8 @@ worked, and completed.
 
 ## Phase 1 — POC
 
-> **Phase plan set in STEP-1.2** — see `Code/quasar-disney-mobile-docs/architecture/02-phasing-roadmap.md`.
-> Phase 1 is a functional POC with **visual fidelity** to supplied Disney+ reference screens, split
+> **Phase plan set in STEP-1.2** — see `Code/quasar-qc-plus-mobile-docs/architecture/02-phasing-roadmap.md` *(after 6.1 rename; until then, current docs hub path per `repos.yml`)*.
+> Phase 1 is a functional POC with **visual fidelity** to supplied streaming reference screens, split
 > into **1a** (gated by an immovable stakeholder sign-off on **2026-08-18**) and **1b** (remainder,
 > undated). 1a = two-step auth (welcome → email → password + inline error) · storefront with 2
 > config-driven carousel variants · Emotion theme · RTK Query `baseApi` + axios interceptors ·
@@ -41,13 +41,31 @@ worked, and completed.
 | STEP-3 | Contract types, baseApi & mocks | Andres Montoya | Done | `quasar-disney-mobile-app`, `quasar-disney-mobile-docs`, `prompts` | Transcribe doc 11 §7 into `src/api/types/` (types become normative), then stand up axios interceptors, RTK Query `baseApi`, and `axios-mock-adapter` with typed fixtures, constructor-injected latency/clock/failure, and Bearer `exp` checks on operations 2–5. Unit and integration tests cover envelope/cursors, `ApiError` normalization, 401 scoping, and expired JWT (doc 11 §11.3, doc 12 T1–T2). Parallel with STEP-2 after the api tree exists; no RN UI. **Done 2026-08-18 — 5 substeps, review passed, merged to `main`. Archived `prompts/001-poc/step-0003/`.** |
 | STEP-4 | Auth feature | Raul Angel | Done | `quasar-disney-mobile-app` | Welcome → email → password on the light surface, with `login`/`getMe` injectEndpoints, auth slice persisted to encrypted storage, and the F2 inline error driven by a simulated failed fetch. Tests: auth reducer/selectors, login success/failure, session restore, and `getMe` 401 → Welcome (T1/T2). **Done 2026-08-18 — 5 substeps, review passed, merged app PR #5. Archived `prompts/001-poc/step-0004/`.** |
 | STEP-5 | Storefront feature | Raul Angel | Done | `quasar-disney-mobile-app` | Dark-theme home: header, four-tab bar with `ComingSoon` placeholders, config-driven carousel (continue-watching, standard portrait, 3:4 hero stand-in), pagination wrappers, hero + progress composition, silent CW reload, and card tap → title alert. Tests: composition, `loadMore`/`hasMore`, unknown-variant drop+warn, and both paging axes (T1/T2). **Done 2026-08-18 — 5 substeps, review passed, merged app PR #6. Archived `prompts/001-poc/step-0005/`.** |
-| STEP-6 | Integration, theme-swap & release smoke | Raul Angel | Planned | `quasar-disney-mobile-app` | Wire auth and storefront through the shell (cold-start gate, theme by session, connectivity overlay) and verify F1–F3 and A1–A6 on both platforms, including a second test theme that re-skins both modes. Cut the release build and install on two devices per `runbooks/release-deploy.md`; the manual smoke is the Phase-1 e2e layer. Depends on STEP-4 and STEP-5. |
-| STEP-7 | Live + landscape carousel variants | Andres Montoya | Planned | `quasar-disney-mobile-app`, `quasar-disney-mobile-docs` | Phase 1b: unpark `'live'` and landscape in the data model/contract and add them as carousel configuration (VIVO badge, red progress, landscape tiles), not new carousel components. Unit tests for the new variant mapping. Not on the 18 Aug path; depends on STEP-6 (or at least STEP-5). |
-| STEP-8 | UI tests + QA smoke checklist | Raul Angel | Planned | `quasar-disney-mobile-app` | Phase 1b: T3 render tests for atoms and screens (theme tokens, a11y props) plus the formal QA smoke checklist deferred from 1a. Completes Phase 1. Depends on STEP-7 so the new variants are covered. |
+| STEP-6 | Integration, theme-swap & release smoke | Raul Angel | Planned | `quasar-qc-plus-mobile-app`, `quasar-qc-plus-mobile-docs`, `quasar-qc-plus-mobile-prompts` | **UI polish first** — rebrand to **`QC+`** (all three repos, native, UI), then boot gate + release smoke. Start at **6.1**. `Upcoming Prompts/quasar-qc-plus-mobile-STEP-6-*`. |
+| STEP-7 | Live + landscape carousel variants | Andres Montoya | Planned | `quasar-qc-plus-mobile-app`, `quasar-qc-plus-mobile-docs` | Phase 1b: unpark `'live'` and landscape in the data model/contract and add them as carousel configuration (VIVO badge, red progress, landscape tiles), not new carousel components. Unit tests for the new variant mapping. Not on the 18 Aug path; depends on STEP-6 (or at least STEP-5). |
+| STEP-8 | UI tests + QA smoke checklist | Raul Angel | Planned | `quasar-qc-plus-mobile-app` | Phase 1b: T3 render tests for atoms and screens (theme tokens, a11y props) plus the formal QA smoke checklist deferred from 1a. Completes Phase 1. Depends on STEP-7 so the new variants are covered. |
 
 <!-- Implementation STEPs outlined 2026-08-17 by the planning session. No Check-in STEP in this
      phase (cadence 20; first due ~STEP-15–25). STEP-2 PLAN approved 2026-08-17; execution
      starts on `run substep 2.1`. -->
+
+### STEP-6 substeps (implementation)
+
+> PLAN and prompts live in `Upcoming Prompts/` until the STEP is archived.
+> **Start at 6.1** (UI polish). Integration begins at **6.5**.
+> Execution starts only on an explicit `run substep 6.N` command.
+
+| Substep | Title | Status | Produces |
+|---------|-------|--------|----------|
+| 6.1 | Native + repo rebrand `QC+` | Planned | All three **`quasar-qc-plus-mobile-*`** repos, `QCPlusApp`, **icon pack zip**, splash, display **`QC+`**, reference input rename |
+| 6.2 | Welcome UI + QC+ wordmark | Planned | QC+ wordmark SVGs, `Wordmark` atom, welcome i18n, reference layout |
+| 6.3 | Email/password UI + MiQC+ i18n | Planned | Sheet chrome, **QC+ / MiQC+** auth copy in `es-419.json` |
+| 6.4 | Storefront UI + shell wordmarks | Planned | Carousel/header/tab polish; **LoadingGate** / error boundary **QC+**; **grep gate pass** |
+| 6.5 | Three-query boot gate + T2 | Planned | Extended `useSessionValidation`, `bootGate.integration.test.ts` |
+| 6.6 | Feed cache handoff + shell polish | Planned | RTK cache seeding, post-gate Home UX, optional StatusBar fix |
+| 6.7 | Simulator smoke — F1/F2/F3, A1, overlay | Planned | Manual checklist iOS + Android simulators |
+| 6.8 | Release pre-flight + build | Planned | Trunk merge, version + tag, release `.ipa` / `.apk` |
+| 6.9 | Device install, sign-off smoke, review | Planned | USB installs, a11y spot-check, archived `prompts/001-poc/step-0006/` |
 
 ### STEP-3 substeps (implementation)
 
