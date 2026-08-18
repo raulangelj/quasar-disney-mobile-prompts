@@ -56,7 +56,7 @@ worked, and completed.
 
 | Substep | Title | Status | Produces |
 |---------|-------|--------|----------|
-| 3.1 | Wire types — transcribe doc 11 §7 | In progress | `src/api/types/` (`card`, `container`, `envelope`, `auth`, `errors`, barrel), page-size constants; doc 11 §2/§3 handover + Version Log; app README contract-of-record line |
+| 3.1 | Wire types — transcribe doc 11 §7 | Done | `src/api/types/` (`card`, `container`, `envelope`, `auth`, `errors`, barrel), page-size constants; doc 11 §2/§3 handover + Version Log; app README contract-of-record line |
 | 3.2 | axios client, interceptors, `baseQueryWithAuth`, `baseApi` | Planned | `src/api/client/`, `src/api/sessionCleared.ts`, `src/api/baseApi.ts` |
 | 3.3 | Mock adapter — seams, mock JWT, five handlers | Planned | `src/api/mocks/createMockAdapter.ts`, `jwt.ts`, `cursor.ts`, `handlers/*.ts` |
 | 3.4 | Demo fixtures, placeholder art, test factories | Planned | `src/api/mocks/fixtures/*.ts`, `src/shared/assets/placeholder-art/*.svg`, `*.factory.ts` |
