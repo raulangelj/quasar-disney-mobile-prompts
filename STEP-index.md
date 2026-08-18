@@ -69,11 +69,11 @@ worked, and completed.
 
 | Substep | Title | Status | Produces |
 |---------|-------|--------|----------|
-| 5.1 | Feed endpoints + pagination hooks | Planned | `features/storefront/api.ts`, `hooks/usePaginatedContainers.ts`, `hooks/useCarouselPage.ts`, T1 hook tests |
-| 5.2 | Artwork resolver + tile molecules | Planned | Metro SVG transformer, `placeholderArt.ts`, `SectionHeader`, `PortraitTile`, `ProgressTile`, storefront i18n |
-| 5.3 | Config-driven carousel + variant map | Planned | `CarouselRow`, `variantConfig.ts`, unknown-variant drop + warn, T1 variant tests |
-| 5.4 | Composed home + silent CW + shell chrome | Planned | `useComposedHome`, `HomeFeedList`, `AppHeader`, silent CW refetch, T1 composition + T2 silent-reload tests |
-| 5.5 | HomeScreen + card tap + final gate | Planned | Real `HomeScreen`, Alert on tap, T2 paging-axis tests, manual F3 smoke, STEP review prep |
+| 5.1 | Feed endpoints + pagination hooks | Done | `features/storefront/api.ts`, `hooks/usePaginatedContainers.ts`, `hooks/useCarouselPage.ts`, T1 hook tests |
+| 5.2 | Artwork resolver + tile molecules | Done | Metro SVG transformer, `placeholderArt.ts`, `SectionHeader`, `PortraitTile`, `ProgressTile`, storefront i18n |
+| 5.3 | Config-driven carousel + variant map | Done | `CarouselRow`, `variantConfig.ts`, unknown-variant drop + warn, T1 variant tests |
+| 5.4 | Composed home + silent CW + shell chrome | Done | `useComposedHome`, `HomeFeedList`, `AppHeader`, silent CW refetch, T1 composition + T2 silent-reload tests |
+| 5.5 | HomeScreen + card tap + final gate | Done | Real `HomeScreen`, Alert on tap, T2 paging-axis tests, manual F3 smoke, STEP review prep |
 
 ### STEP-4 substeps (implementation)
 
