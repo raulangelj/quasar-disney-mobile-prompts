@@ -46,9 +46,22 @@ worked, and completed.
 | STEP-8 | UI tests + QA smoke checklist | Raul Angel | Planned | `quasar-disney-mobile-app` | Phase 1b: T3 render tests for atoms and screens (theme tokens, a11y props) plus the formal QA smoke checklist deferred from 1a. Completes Phase 1. Depends on STEP-7 so the new variants are covered. |
 
 <!-- Implementation STEPs outlined 2026-08-17 by the planning session. No Check-in STEP in this
-     phase (cadence 20; first due ~STEP-15–25). Each STEP's PLAN and substeps are written later,
-     when that STEP starts — planning it then stopping for approval before any substep runs. -->
+     phase (cadence 20; first due ~STEP-15–25). STEP-2 PLAN approved 2026-08-17; execution
+     starts on `run substep 2.1`. -->
 
+### STEP-2 substeps (implementation)
+
+> PLAN and prompts live in `Upcoming Prompts/` until the STEP is archived.
+> Execution starts only on an explicit `run substep 2.N` command.
+
+| Substep | Title | Status | Produces |
+|---------|-------|--------|----------|
+| 2.1 | Create app repo & boot both platforms | Planned | `Code/quasar-disney-mobile-app/` (bare RN + TS), license, GitHub remote, iOS + Android boot |
+| 2.2 | Source layout, env, register repo | Planned | `src/{app,features,shared,api}/`, `.env.example`, README, `repos.yml`. Unblocks STEP-3; thin PR to `main` |
+| 2.3 | Tooling, `createStore()`, CI | Planned | ESLint A5/DF1/A2, Prettier, Jest `@env` + native mocks, `createStore()`, GitHub Actions Tier A |
+| 2.4 | Theme, fonts, i18n, outlined wordmarks | Planned | Emotion both brands × both modes, Inter, `es-419`, outlined brand SVGs, token-parity test |
+| 2.5 | Shared atoms & icons | Planned | Doc 07 §3.1 atoms + §6 SVG icons (T3 deferred) |
+| 2.6 | Navigation shell, overlay, error boundary | Planned | Two navigators, ComingSoon tabs, NetInfo overlay, LoadingGate stub, root error boundary |
 
 ### STEP-1 substeps (architecture sessions)
 
