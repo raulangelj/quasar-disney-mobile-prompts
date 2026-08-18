@@ -62,6 +62,19 @@ worked, and completed.
 | 3.4 | Demo fixtures, placeholder art, test factories | Done | `src/api/mocks/fixtures/` (`ids`, `artwork`, `homeFeed`, `continueWatching`, `user`, barrel, fixture-invariant test), `src/shared/assets/placeholder-art/*.svg` (7), `card`/`container`/`page` `*.factory.ts`; doc 03 §8.1 + Version Log |
 | 3.5 | T2 integration tests + final verification gate | Planned | `src/api/**/*.test.ts` (T2), green `tsc --noEmit` · `jest` · `eslint` · `prettier --check` |
 
+### STEP-4 substeps (implementation)
+
+> PLAN and prompts live in `Upcoming Prompts/` until the STEP is archived.
+> Execution starts only on an explicit `run substep 4.N` command. **Wait for STEP-3 on `main` before 4.1.**
+
+| Substep | Title | Status | Produces |
+|---------|-------|--------|----------|
+| 4.1 | Auth slice + login / getMe endpoints | Planned | Real auth slice, `features/auth/api.ts`, T1 reducer/selectors/persist tests |
+| 4.2 | Auth molecules + i18n | Planned | `AuthSheetLayout`, `WelcomeHero`, `CredentialsForm`; `auth.*` i18n keys |
+| 4.3 | Welcome + EmailEntry screens | Planned | Real Welcome/Email screens, theme long-press, email validation + navigation |
+| 4.4 | PasswordEntry + F2 inline error | Planned | Password screen, login UX, T2 login + INVALID_CREDENTIALS scoping tests |
+| 4.5 | Session restore, /me 401, shell wiring | Planned | getMe-only LoadingGate, boot/post-login restore, T2 401 tests, manual auth smoke |
+
 ### STEP-2 substeps (implementation)
 
 > PLAN and prompts archived to `prompts/001-poc/step-0002/`.
