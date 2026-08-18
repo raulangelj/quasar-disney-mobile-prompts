@@ -72,9 +72,9 @@ worked, and completed.
 | 2.1 | Create app repo & boot both platforms | Done | `Code/quasar-disney-mobile-app/` (bare RN + TS), license, GitHub remote, iOS + Android boot |
 | 2.2 | Source layout, env, register repo | Done | `src/{app,features,shared,api}/`, `.env.example`, README, `repos.yml`. Unblocks STEP-3; thin PR to `main` |
 | 2.3 | Tooling, `createStore()`, CI | Done | ESLint A5/DF1/A2, Prettier, Jest `@env` + native mocks, `createStore()`, GitHub Actions Tier A |
-| 2.4 | Theme, fonts, i18n, outlined wordmarks | Planned | Emotion both brands × both modes, Inter, `es-419`, outlined brand SVGs, token-parity test |
-| 2.5 | Shared atoms & icons | Planned | Doc 07 §3.1 atoms + §6 SVG icons (T3 deferred) |
-| 2.6 | Navigation shell, overlay, error boundary | Planned | Two navigators, ComingSoon tabs, NetInfo overlay, LoadingGate stub, root error boundary |
+| 2.4 | Theme, fonts, i18n, outlined wordmarks | Done | Emotion both brands × both modes, Inter, `es-419`, outlined brand SVGs, token-parity test |
+| 2.5 | Shared atoms & icons | Done | Doc 07 §3.1 atoms + §6 SVG icons (T3 deferred) |
+| 2.6 | Navigation shell, overlay, error boundary | Done | Two navigators, ComingSoon tabs, NetInfo overlay, LoadingGate stub, root error boundary |
 
 ### STEP-1 substeps (architecture sessions)
 
