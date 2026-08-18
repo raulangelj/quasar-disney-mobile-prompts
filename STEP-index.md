@@ -59,7 +59,7 @@ worked, and completed.
 | 3.1 | Wire types — transcribe doc 11 §7 | Done | `src/api/types/` (`card`, `container`, `envelope`, `auth`, `errors`, barrel), page-size constants; doc 11 §2/§3 handover + Version Log; app README contract-of-record line |
 | 3.2 | axios client, interceptors, `baseQueryWithAuth`, `baseApi` | Done | `src/api/client/` (paths, instance, `injectStore`, both interceptors, `axiosBaseQuery`, `baseQueryWithAuth`), `src/api/sessionCleared.ts`, `src/api/baseApi.ts`; doc 03 §8.1/§8.2 seam + Version Log |
 | 3.3 | Mock adapter — seams, mock JWT, five handlers | Done | `src/api/mocks/` — `createMockAdapter.ts`, `context.ts`, `jwt.ts`, `cursor.ts`, `base64url.ts`, `handlers/*.ts` (five operations + Bearer guard); `axios-mock-adapter` dependency |
-| 3.4 | Demo fixtures, placeholder art, test factories | Planned | `src/api/mocks/fixtures/*.ts`, `src/shared/assets/placeholder-art/*.svg`, `*.factory.ts` |
+| 3.4 | Demo fixtures, placeholder art, test factories | Done | `src/api/mocks/fixtures/` (`ids`, `artwork`, `homeFeed`, `continueWatching`, `user`, barrel, fixture-invariant test), `src/shared/assets/placeholder-art/*.svg` (7), `card`/`container`/`page` `*.factory.ts`; doc 03 §8.1 + Version Log |
 | 3.5 | T2 integration tests + final verification gate | Planned | `src/api/**/*.test.ts` (T2), green `tsc --noEmit` · `jest` · `eslint` · `prettier --check` |
 
 ### STEP-2 substeps (implementation)
