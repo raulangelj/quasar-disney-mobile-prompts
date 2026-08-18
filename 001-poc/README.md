@@ -13,5 +13,6 @@ here. STEP numbers are global (they don't reset per phase).
 | [STEP-1](step-0001/) | Architecture | 14 core + 2 included conditionals (1.3a, 1.6a); privacy Deferred | 2026-08-17 |
 | [STEP-2](step-0002/) | Scaffold app repo & foundation | 6 (2.1–2.6) | 2026-08-18 |
 | [STEP-3](step-0003/) | Contract types, baseApi & mocks | 5 (3.1–3.5) | 2026-08-18 |
+| [STEP-4](step-0004/) | Auth feature | 5 (4.1–4.5) | 2026-08-18 |
 
 <!-- Add a row when a STEP's folder is moved into this phase on completion. -->
