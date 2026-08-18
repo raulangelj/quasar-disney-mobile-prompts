@@ -27,15 +27,16 @@ worked, and completed.
 > **Phase plan set in STEP-1.2** — see `Code/quasar-disney-mobile-docs/architecture/02-phasing-roadmap.md`.
 > Phase 1 is a functional POC with **visual fidelity** to supplied Disney+ reference screens, split
 > into **1a** (gated by an immovable stakeholder sign-off on **2026-08-18**) and **1b** (remainder,
-> undated). 1a = auth flow (welcome + credentials + inline error) · storefront with 2 config-driven
-> carousel variants · two-mode theme · API contract + fetch-simulating mocks · tests for every
-> reducer/middleware/hook (UI tests deferred). Later: **Phase 2** hero carousel, filter rail, details
-> screen, Bitrise CI · **Phase 3** backend integration (we build no backend) · **Phase 4+** playback,
-> profiles, downloads.
+> undated). 1a = two-step auth (welcome → email → password + inline error) · storefront with 2
+> config-driven carousel variants · Emotion theme · RTK Query `baseApi` + axios interceptors ·
+> API contract + `axios-mock-adapter` mocks · tests for every reducer/endpoint/hook (UI tests
+> deferred). Later: **Phase 2** hero carousel chrome, filter rail, details screen, Bitrise native
+> CI · **Phase 3** backend integration (we build no backend) · **Phase 4+** playback, profiles,
+> downloads.
 
 | STEP | Title | Owner | Status | Repos (projection) | Scope (one line) |
 |------|-------|-------|--------|--------------------|------------------|
-| STEP-1 | Architecture | | In progress | `quasar-disney-mobile-docs`, `prompts` | Architecture-first: design docs + ADRs, no code. Substeps = the sessions in `templates/architecture-sessions/`. Branch: `step-0001-architecture`. |
+| STEP-1 | Architecture | | Done | `quasar-disney-mobile-docs`, `prompts` | Architecture-first: design docs + ADRs, no code. Archived `prompts/001-poc/step-0001/`. |
 
 <!-- STEP-1 is the ONLY row at bootstrap. STEP-2 onward are the implementation STEPs — don't
      add them by hand: after STEP-1's review passes, run the planning session
@@ -70,7 +71,7 @@ worked, and completed.
 | 1.11 | Interface Contracts | Done | `architecture/11-interface-contracts.md` |
 | 1.12 | Test Strategy | Done | `architecture/12-test-strategy.md` |
 | 1.13 | Glossary | Done | `architecture/13-glossary.md` |
-| 1.14 | Cross-Cutting Review | Planned | review doc |
+| 1.14 | Cross-Cutting Review | Done | `prompts/001-poc/step-0001/quasar-disney-mobile-STEP-1-REVIEW.md` |
 
 <!-- Conditional sessions: enumerate every conditional-*.md template and include/defer/skip it
      in the STEP-1 PLAN's "Conditional sessions considered" table. Add an index row only when
