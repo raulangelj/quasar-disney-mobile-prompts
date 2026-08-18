@@ -38,7 +38,7 @@ worked, and completed.
 |------|-------|-------|--------|--------------------|------------------|
 | STEP-1 | Architecture | | Done | `quasar-disney-mobile-docs`, `prompts` | Architecture-first: design docs + ADRs, no code. Archived `prompts/001-poc/step-0001/`. |
 | STEP-2 | Scaffold app repo & foundation | Raul Angel | In progress | `quasar-disney-mobile-app`, `quasar-disney-mobile-docs`, `prompts` | Create `quasar-disney-mobile-app` (bare RN + TypeScript, iOS + Android), fill README, register it in `registries/repos.yml`, apply proprietary license posture, and add `.gitignore` plus `.env.example`. Wire `src/app`, `src/features`, `src/shared`, `src/api`, Emotion theme (both surface modes), `createStore()` with stub slots, navigation shell, NetInfo overlay, root error boundary, shared atoms, GitHub Actions JS gate, ESLint import/theme rules, Jest `@env` stub, and outlined wordmarks. STEP-3 may start once the repo and `src/api/` tree exist. |
-| STEP-3 | Contract types, baseApi & mocks | Andres Montoya | Planned | `quasar-disney-mobile-app`, `quasar-disney-mobile-docs`, `prompts` | Transcribe doc 11 §7 into `src/api/types/` (types become normative), then stand up axios interceptors, RTK Query `baseApi`, and `axios-mock-adapter` with typed fixtures, constructor-injected latency/clock/failure, and Bearer `exp` checks on operations 2–5. Unit and integration tests cover envelope/cursors, `ApiError` normalization, 401 scoping, and expired JWT (doc 11 §11.3, doc 12 T1–T2). Parallel with STEP-2 after the api tree exists; no RN UI. **Planned 2026-08-17 — 5 substeps, branch `step-0003-contract-mocks`; PLAN + substep prompts in `Upcoming Prompts/`.** |
+| STEP-3 | Contract types, baseApi & mocks | Andres Montoya | In progress | `quasar-disney-mobile-app`, `quasar-disney-mobile-docs`, `prompts` | Transcribe doc 11 §7 into `src/api/types/` (types become normative), then stand up axios interceptors, RTK Query `baseApi`, and `axios-mock-adapter` with typed fixtures, constructor-injected latency/clock/failure, and Bearer `exp` checks on operations 2–5. Unit and integration tests cover envelope/cursors, `ApiError` normalization, 401 scoping, and expired JWT (doc 11 §11.3, doc 12 T1–T2). Parallel with STEP-2 after the api tree exists; no RN UI. **Planned 2026-08-17 — 5 substeps, branch `step-0003-contract-mocks`; PLAN + substep prompts in `Upcoming Prompts/`.** |
 | STEP-4 | Auth feature | Raul Angel | Planned | `quasar-disney-mobile-app` | Welcome → email → password on the light surface, with `login`/`getMe` injectEndpoints, auth slice persisted to encrypted storage, and the F2 inline error driven by a simulated failed fetch. Tests: auth reducer/selectors, login success/failure, session restore, and `getMe` 401 → Welcome (T1/T2). Depends on STEP-2 and STEP-3 merged. |
 | STEP-5 | Storefront feature | Andres Montoya | Planned | `quasar-disney-mobile-app` | Dark-theme home: header, four-tab bar with `ComingSoon` placeholders, config-driven carousel (continue-watching, standard portrait, 3:4 hero stand-in), pagination wrappers, hero + progress composition, silent CW reload, and card tap → title alert. Tests: composition, `loadMore`/`hasMore`, unknown-variant drop+warn, and both paging axes (T1/T2). Depends on STEP-2 and STEP-3 merged. |
 | STEP-6 | Integration, theme-swap & release smoke | Raul Angel | Planned | `quasar-disney-mobile-app` | Wire auth and storefront through the shell (cold-start gate, theme by session, connectivity overlay) and verify F1–F3 and A1–A6 on both platforms, including a second test theme that re-skins both modes. Cut the release build and install on two devices per `runbooks/release-deploy.md`; the manual smoke is the Phase-1 e2e layer. Depends on STEP-4 and STEP-5. |
@@ -48,6 +48,19 @@ worked, and completed.
 <!-- Implementation STEPs outlined 2026-08-17 by the planning session. No Check-in STEP in this
      phase (cadence 20; first due ~STEP-15–25). STEP-2 PLAN approved 2026-08-17; execution
      starts on `run substep 2.1`. -->
+
+### STEP-3 substeps (implementation)
+
+> PLAN and prompts live in `Upcoming Prompts/` until the STEP is archived.
+> Execution starts only on an explicit `run substep 3.N` command.
+
+| Substep | Title | Status | Produces |
+|---------|-------|--------|----------|
+| 3.1 | Wire types — transcribe doc 11 §7 | In progress | `src/api/types/` (`card`, `container`, `envelope`, `auth`, `errors`, barrel), page-size constants; doc 11 §2/§3 handover + Version Log; app README contract-of-record line |
+| 3.2 | axios client, interceptors, `baseQueryWithAuth`, `baseApi` | Planned | `src/api/client/`, `src/api/sessionCleared.ts`, `src/api/baseApi.ts` |
+| 3.3 | Mock adapter — seams, mock JWT, five handlers | Planned | `src/api/mocks/createMockAdapter.ts`, `jwt.ts`, `cursor.ts`, `handlers/*.ts` |
+| 3.4 | Demo fixtures, placeholder art, test factories | Planned | `src/api/mocks/fixtures/*.ts`, `src/shared/assets/placeholder-art/*.svg`, `*.factory.ts` |
+| 3.5 | T2 integration tests + final verification gate | Planned | `src/api/**/*.test.ts` (T2), green `tsc --noEmit` · `jest` · `eslint` · `prettier --check` |
 
 ### STEP-2 substeps (implementation)
 
