@@ -58,7 +58,7 @@ worked, and completed.
 | Substep | Title | Status | Produces |
 |---------|-------|--------|----------|
 | 6.1 | Native + repo rebrand `QC+` | Done | All three **`quasar-qc-plus-mobile-*`** repos, `QCPlusApp`, **icon pack zip**, splash, display **`QC+`**, reference input rename |
-| 6.2 | Welcome UI + QC+ wordmark | Planned | QC+ wordmark SVGs, `Wordmark` atom, welcome i18n, reference layout |
+| 6.2 | Welcome UI + QC+ wordmark | Done | QC+ wordmark SVGs, `Wordmark` atom, welcome i18n, reference layout |
 | 6.3 | Email/password UI + MiQC+ i18n | Planned | Sheet chrome, **QC+ / MiQC+** auth copy in `es-419.json` |
 | 6.4 | Storefront UI + shell wordmarks | Planned | Carousel/header/tab polish; **LoadingGate** / error boundary **QC+**; **grep gate pass** |
 | 6.5 | Three-query boot gate + T2 | Planned | Extended `useSessionValidation`, `bootGate.integration.test.ts` |
