@@ -58,9 +58,9 @@ worked, and completed.
 | Substep | Title | Status | Produces |
 |---------|-------|--------|----------|
 | 6.1 | Native + repo rebrand `QC+` | Done | All three **`quasar-qc-plus-mobile-*`** repos, `QCPlusApp`, **icon pack zip**, splash, display **`QC+`**, reference input rename |
-| 6.2 | Welcome UI + QC+ wordmark | Done | QC+ wordmark SVGs, `Wordmark` atom, welcome i18n, reference layout |
+| 6.2 | Welcome UI + QC+ wordmark | Done | QC+ wordmark, welcome i18n, auth feature-module layout (`screens/`, `components/`, `helpers/`, `state/slices|actions|selectors/`) — doc 03 §8.1.1 |
 | 6.3 | Email/password UI + MiQC+ i18n | Planned | Sheet chrome, **QC+ / MiQC+** auth copy in `es-419.json` |
-| 6.4 | Storefront UI + shell wordmarks | Planned | Carousel/header/tab polish; **LoadingGate** / error boundary **QC+**; **grep gate pass** |
+| 6.4 | Storefront UI + shell wordmarks | Planned | **Auth-parity folder migration** (`screens/`, `helpers/`); carousel/header/tab polish; **QC+** shell wordmarks; **grep gate pass** |
 | 6.5 | Three-query boot gate + T2 | Planned | Extended `useSessionValidation`, `bootGate.integration.test.ts` |
 | 6.6 | Feed cache handoff + shell polish | Planned | RTK cache seeding, post-gate Home UX, optional StatusBar fix |
 | 6.7 | Simulator smoke — F1/F2/F3, A1, overlay | Planned | Manual checklist iOS + Android simulators |
@@ -100,7 +100,7 @@ worked, and completed.
 
 | Substep | Title | Status | Produces |
 |---------|-------|--------|----------|
-| 4.1 | Auth slice + login / getMe endpoints | Done | Real auth slice, `features/auth/api.ts`, `logout.ts`, T1 reducer/selectors/persist tests; mock adapter wired at app entry |
+| 4.1 | Auth slice + login / getMe endpoints | Done | Real auth slice (`state/slices/auth/`), `features/auth/api.ts`, `state/actions/logout.ts`, T1 reducer/selectors/persist tests; mock adapter wired at app entry |
 | 4.2 | Auth molecules + i18n | Done | `AuthSheetLayout`, `WelcomeHero`, `CredentialsForm`, `auth.*` i18n keys; `TextField` hint below error |
 | 4.3 | Welcome + EmailEntry screens | Done | `WelcomeScreen`, `EmailEntryScreen`, `PasswordEntry` route params, theme long-press via `cycleActiveTheme`, email validation |
 | 4.4 | PasswordEntry + F2 inline error | Done | Password screen, login UX, T2 login + INVALID_CREDENTIALS scoping tests |
