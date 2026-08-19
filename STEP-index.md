@@ -61,6 +61,10 @@ worked, and completed.
 | 6.2 | Welcome UI + QC+ wordmark | Done | QC+ wordmark, welcome i18n, auth feature-module layout (`screens/`, `components/`, `helpers/`, `state/slices|actions|selectors/`) — doc 03 §8.1.1 |
 | 6.3 | Email/password UI + MiQC+ i18n | Done | ~78% auth sheet, **MiQC+** sub-brand slot, email footer divider + grey brand row, **QC+ / MiQC+** i18n (`common.subBrand`, `auth.email.*`, `auth.password.*`) |
 | 6.4 | Storefront UI + shell wordmarks | Done | **Auth-parity folder migration** (`screens/`, `helpers/`); carousel/header/tab polish; **QC+** shell wordmarks; **grep gate pass** |
+| 6.4.1 | Storefront header (stakeholder pack) | Done | QC+ wordmark PNG, download + cast icons, pack proportions — `QC_plus_storefront_pack` |
+| 6.4.2 | Storefront hero | Planned | Hero banner art, NEW MOVIE badge, title/meta, Watch + add buttons, pagination dots |
+| 6.4.3 | Continue Watching carousel | Planned | Landscape tiles, centered play, amber progress bar, title below card |
+| 6.4.4 | Must Watch + Premium carousels | Planned | Portrait tiles, NEW MOVIE badge, crown overlay, section chevrons |
 | 6.5 | Three-query boot gate + T2 | Planned | Extended `useSessionValidation`, `bootGate.integration.test.ts` |
 | 6.6 | Feed cache handoff + shell polish | Planned | RTK cache seeding, post-gate Home UX, optional StatusBar fix |
 | 6.7 | Simulator smoke — F1/F2/F3, A1, overlay | Planned | Manual checklist iOS + Android simulators |
