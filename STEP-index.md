@@ -59,8 +59,8 @@ worked, and completed.
 |---------|-------|--------|----------|
 | 6.1 | Native + repo rebrand `QC+` | Done | All three **`quasar-qc-plus-mobile-*`** repos, `QCPlusApp`, **icon pack zip**, splash, display **`QC+`**, reference input rename |
 | 6.2 | Welcome UI + QC+ wordmark | Done | QC+ wordmark, welcome i18n, auth feature-module layout (`screens/`, `components/`, `helpers/`, `state/slices|actions|selectors/`) — doc 03 §8.1.1 |
-| 6.3 | Email/password UI + MiQC+ i18n | Planned | Sheet chrome, **QC+ / MiQC+** auth copy in `es-419.json` |
-| 6.4 | Storefront UI + shell wordmarks | Planned | **Auth-parity folder migration** (`screens/`, `helpers/`); carousel/header/tab polish; **QC+** shell wordmarks; **grep gate pass** |
+| 6.3 | Email/password UI + MiQC+ i18n | Done | ~78% auth sheet, **MiQC+** sub-brand slot, email footer divider + grey brand row, **QC+ / MiQC+** i18n (`common.subBrand`, `auth.email.*`, `auth.password.*`) |
+| 6.4 | Storefront UI + shell wordmarks | Done | **Auth-parity folder migration** (`screens/`, `helpers/`); carousel/header/tab polish; **QC+** shell wordmarks; **grep gate pass** |
 | 6.5 | Three-query boot gate + T2 | Planned | Extended `useSessionValidation`, `bootGate.integration.test.ts` |
 | 6.6 | Feed cache handoff + shell polish | Planned | RTK cache seeding, post-gate Home UX, optional StatusBar fix |
 | 6.7 | Simulator smoke — F1/F2/F3, A1, overlay | Planned | Manual checklist iOS + Android simulators |
