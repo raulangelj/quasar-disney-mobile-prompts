@@ -41,7 +41,7 @@ worked, and completed.
 | STEP-3 | Contract types, baseApi & mocks | Andres Montoya | Done | `quasar-disney-mobile-app`, `quasar-disney-mobile-docs`, `prompts` | Transcribe doc 11 §7 into `src/api/types/` (types become normative), then stand up axios interceptors, RTK Query `baseApi`, and `axios-mock-adapter` with typed fixtures, constructor-injected latency/clock/failure, and Bearer `exp` checks on operations 2–5. Unit and integration tests cover envelope/cursors, `ApiError` normalization, 401 scoping, and expired JWT (doc 11 §11.3, doc 12 T1–T2). Parallel with STEP-2 after the api tree exists; no RN UI. **Done 2026-08-18 — 5 substeps, review passed, merged to `main`. Archived `prompts/001-poc/step-0003/`.** |
 | STEP-4 | Auth feature | Raul Angel | Done | `quasar-disney-mobile-app` | Welcome → email → password on the light surface, with `login`/`getMe` injectEndpoints, auth slice persisted to encrypted storage, and the F2 inline error driven by a simulated failed fetch. Tests: auth reducer/selectors, login success/failure, session restore, and `getMe` 401 → Welcome (T1/T2). **Done 2026-08-18 — 5 substeps, review passed, merged app PR #5. Archived `prompts/001-poc/step-0004/`.** |
 | STEP-5 | Storefront feature | Raul Angel | Done | `quasar-disney-mobile-app` | Dark-theme home: header, four-tab bar with `ComingSoon` placeholders, config-driven carousel (continue-watching, standard portrait, 3:4 hero stand-in), pagination wrappers, hero + progress composition, silent CW reload, and card tap → title alert. Tests: composition, `loadMore`/`hasMore`, unknown-variant drop+warn, and both paging axes (T1/T2). **Done 2026-08-18 — 5 substeps, review passed, merged app PR #6. Archived `prompts/001-poc/step-0005/`.** |
-| STEP-6 | Integration, theme-swap & release smoke | Raul Angel | Planned | `quasar-qc-plus-mobile-app`, `quasar-qc-plus-mobile-docs`, `quasar-qc-plus-mobile-prompts` | **UI polish first** — rebrand to **`QC+`** (all three repos, native, UI), then boot gate + release smoke. Start at **6.1**. `Upcoming Prompts/quasar-qc-plus-mobile-STEP-6-*`. |
+| STEP-6 | Integration, theme-swap & release smoke | Raul Angel | In progress | `quasar-qc-plus-mobile-app`, `quasar-qc-plus-mobile-docs`, `quasar-qc-plus-mobile-prompts` | **UI polish first** — rebrand to **`QC+`** (all three repos, native, UI), then boot gate + release smoke. Start at **6.1**. `Upcoming Prompts/quasar-qc-plus-mobile-STEP-6-*`. |
 | STEP-7 | Live + landscape carousel variants | Andres Montoya | Planned | `quasar-qc-plus-mobile-app`, `quasar-qc-plus-mobile-docs` | Phase 1b: unpark `'live'` and landscape in the data model/contract and add them as carousel configuration (VIVO badge, red progress, landscape tiles), not new carousel components. Unit tests for the new variant mapping. Not on the 18 Aug path; depends on STEP-6 (or at least STEP-5). |
 | STEP-8 | UI tests + QA smoke checklist | Raul Angel | Planned | `quasar-qc-plus-mobile-app` | Phase 1b: T3 render tests for atoms and screens (theme tokens, a11y props) plus the formal QA smoke checklist deferred from 1a. Completes Phase 1. Depends on STEP-7 so the new variants are covered. |
 
@@ -57,10 +57,14 @@ worked, and completed.
 
 | Substep | Title | Status | Produces |
 |---------|-------|--------|----------|
-| 6.1 | Native + repo rebrand `QC+` | Planned | All three **`quasar-qc-plus-mobile-*`** repos, `QCPlusApp`, **icon pack zip**, splash, display **`QC+`**, reference input rename |
-| 6.2 | Welcome UI + QC+ wordmark | Planned | QC+ wordmark SVGs, `Wordmark` atom, welcome i18n, reference layout |
-| 6.3 | Email/password UI + MiQC+ i18n | Planned | Sheet chrome, **QC+ / MiQC+** auth copy in `es-419.json` |
-| 6.4 | Storefront UI + shell wordmarks | Planned | Carousel/header/tab polish; **LoadingGate** / error boundary **QC+**; **grep gate pass** |
+| 6.1 | Native + repo rebrand `QC+` | Done | All three **`quasar-qc-plus-mobile-*`** repos, `QCPlusApp`, **icon pack zip**, splash, display **`QC+`**, reference input rename |
+| 6.2 | Welcome UI + QC+ wordmark | Done | QC+ wordmark, welcome i18n, auth feature-module layout (`screens/`, `components/`, `helpers/`, `state/slices|actions|selectors/`) — doc 03 §8.1.1 |
+| 6.3 | Email/password UI + MiQC+ i18n | Done | ~78% auth sheet, **MiQC+** sub-brand slot, email footer divider + grey brand row, **QC+ / MiQC+** i18n (`common.subBrand`, `auth.email.*`, `auth.password.*`) |
+| 6.4 | Storefront UI + shell wordmarks | Done | **Auth-parity folder migration** (`screens/`, `helpers/`); carousel/header/tab polish; **QC+** shell wordmarks; **grep gate pass** |
+| 6.4.1 | Storefront header (stakeholder pack) | Done | QC+ wordmark PNG, download + cast icons, pack proportions — `QC_plus_storefront_pack` |
+| 6.4.2 | Storefront hero | Done | Hero banner art, NEW MOVIE badge, title/meta, Watch + add buttons, pagination dots |
+| 6.4.3 | Continue Watching carousel | Planned | Landscape tiles, centered play, amber progress bar, title below card |
+| 6.4.4 | Must Watch + Premium carousels | Planned | Portrait tiles, NEW MOVIE badge, crown overlay, section chevrons |
 | 6.5 | Three-query boot gate + T2 | Planned | Extended `useSessionValidation`, `bootGate.integration.test.ts` |
 | 6.6 | Feed cache handoff + shell polish | Planned | RTK cache seeding, post-gate Home UX, optional StatusBar fix |
 | 6.7 | Simulator smoke — F1/F2/F3, A1, overlay | Planned | Manual checklist iOS + Android simulators |
@@ -100,7 +104,7 @@ worked, and completed.
 
 | Substep | Title | Status | Produces |
 |---------|-------|--------|----------|
-| 4.1 | Auth slice + login / getMe endpoints | Done | Real auth slice, `features/auth/api.ts`, `logout.ts`, T1 reducer/selectors/persist tests; mock adapter wired at app entry |
+| 4.1 | Auth slice + login / getMe endpoints | Done | Real auth slice (`state/slices/auth/`), `features/auth/api.ts`, `state/actions/logout.ts`, T1 reducer/selectors/persist tests; mock adapter wired at app entry |
 | 4.2 | Auth molecules + i18n | Done | `AuthSheetLayout`, `WelcomeHero`, `CredentialsForm`, `auth.*` i18n keys; `TextField` hint below error |
 | 4.3 | Welcome + EmailEntry screens | Done | `WelcomeScreen`, `EmailEntryScreen`, `PasswordEntry` route params, theme long-press via `cycleActiveTheme`, email validation |
 | 4.4 | PasswordEntry + F2 inline error | Done | Password screen, login UX, T2 login + INVALID_CREDENTIALS scoping tests |
